@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Hat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    
+    <form class="exam-form" id="examForm">
+        <h2>Ваши результаты экзаменов</h2>
+        <label for="math">Математика:</label>
+        <input type="number" id="math" name="math" min="0" max="100" required>
+
+        <label for="russian">Русский язык:</label>
+        <input type="number" id="russian" name="russian" min="0" max="100" required>
+
+        <label for="informatics">Информатика:</label>
+        <input type="number" id="informatics" name="informatics" min="0" max="100" required>
+
+        <label for="physics">Физика:</label>
+        <input type="number" id="physics" name="physics" min="0" max="100" required>
+
+        <button type="submit">Отправить</button>
+        <div class="result" id="result"></div>
+    </form>
+    
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
