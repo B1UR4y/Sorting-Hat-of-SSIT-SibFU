@@ -58,13 +58,19 @@ document.getElementById('examForm').addEventListener('submit', function (event) 
                     availableDirections.find(item => item["проходной_балл"].бюджет === budgetMax) :
                     availableDirections.find(item => item["проходной_балл"].платное === paidMax);
 
+                const paySource = budgetMax >= paidMax ?
+                    "(на бюджетной основе)" :
+                    "(на платной основе)";
+
                 // Создаем объект bestDirection с наименованием и кодом
                 const bestDirection = {
                     name: bestItem.наименование,
                     code: bestItem.код
                 };
 
-                document.getElementById('result').innerText = `Доступное направление: ${bestDirection.code} ${bestDirection.name}`;
+                document.getElementById('result').
+                innerText = `Доступное направление: ${bestDirection.code} 
+                ${bestDirection.name} ${paySource}`;
             }
         })
         .catch(error => console.error('Ошибка загрузки данных:', error));
