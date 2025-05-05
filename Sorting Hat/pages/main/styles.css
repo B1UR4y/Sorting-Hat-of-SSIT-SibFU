@@ -1,75 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #2b0034; /* Темный фон */
-    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    background-color: #1a1a2e;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.exam-form {
-    background: linear-gradient(135deg, #ff77ff, #00ffff);
-    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    width: 40vw; /* Ширина формы */
-    height: 43vh; /* Высота формы */
-    box-shadow: 0 0 20px rgba(255, 119, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
-h2 {
-    color: #2c2929;
+h1 {
     text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 label {
-    color: #2c2929;
-    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
 }
 
-input {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+input[type="text"] {
     width: 100%;
-    font-size: 16px;
-}
-
-input::placeholder {
-    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-sizing: border-box;
 }
 
 button {
-    background-color: #ff77ff;
-    color: #2b0034;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
     width: 100%;
-    font-size: 18px;
+    padding: 10px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    transform: scale(0.95);
-    background-color: #00ffff; /* Изменение цвета при наведении */
+    background-color: #00bfff;
 }
 
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #fff;
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background-size: 200% 200%;
+    animation: backgroundAnimation 15s ease infinite;
 }
