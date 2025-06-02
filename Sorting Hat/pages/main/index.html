@@ -8,23 +8,38 @@
 </head>
 <body>
     <div class="container">
-        <h1>Введи свои баллы ЕГЭ тут</h1>
+        
         <form class="exam-form" id="examForm">
+            <h1>Введи свои баллы ЕГЭ тут</h1>
             <label for="informatics">Информатика:</label>
-            <input type="text" id="informatics" name="informatics" required>
+            <input type="number" id="informatics" name="informatics" required>
 
             <label for="physics">Физика:</label>
-            <input type="text" id="physics" name="physics" required>
+            <input type="number" id="physics" name="physics" required>
 
             <label for="math">Математика (профиль):</label>
-            <input type="text" id="math" name="math" required>
+            <input type="number" id="math" name="math" required>
 
             <label for="russian">Русский язык:</label>
-            <input type="text" id="russian" name="russian" required>
+            <input type="number" id="russian" name="russian" required>
 
             <button type="submit">Отправить</button>
-            <div class="result" id="result"></div>
+
         </form>
+
+        <!-- Блок для теста, изначально скрыт -->
+        <div id="test-container" style="display: none;">
+            <h1>Пройди тест</h1>
+            <h2 id="question"></h2>
+            <div class="answers" id="answers"></div>
+        </div>
+
+        <div id="result" class="result" style="display:none;">
+            <h1>Ваше направление:</h1>
+            <div class="result-text" id="result-text"></div>
+        </div>
+        
+        
     </div>
     <script src="script.js" defer></script>
 </body>
