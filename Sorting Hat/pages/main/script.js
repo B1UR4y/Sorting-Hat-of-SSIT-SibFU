@@ -505,7 +505,7 @@ document
                   else if (item.наименование === "Системный анализ и управление")
                     { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/270303">нажми на ссылку, чтобы узнать подробнее</a>'}
                   else { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/270304">нажми на ссылку, чтобы узнать подробнее</a>'};
-                  resultText.innerHTML = `${item.код} ${item.наименование} ${paySource}`;
+                  resultText.innerHTML = `${item.код} ${item.наименование} <br> ${paySource}`;
                   break outer;
                 }
               }
