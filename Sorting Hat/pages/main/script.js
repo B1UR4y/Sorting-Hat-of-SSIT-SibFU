@@ -23,7 +23,7 @@ document
       russian < minScores.russian ||
       (informatics < minScores.informatics && physics < minScores.physics)
     ) {
-      document.getElementById("result").innerText =
+      document.getElementById("lack").innerText =
         "Ваших баллов недостаточно для поступления :(";
       return;
     }
@@ -58,7 +58,7 @@ document
 
         // Проверка доступных направлений
         if (availableDirections.length < 1) {
-          document.getElementById("result").innerText =
+         document.getElementById("lack").innerText =
             "Нет направлений, доступных вам :(";
         } else {
           // Спрятать форму с баллами
