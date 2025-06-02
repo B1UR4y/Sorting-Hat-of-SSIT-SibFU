@@ -1,92 +1,120 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #1a1a2e;
+  font-family: "Arial", sans-serif;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a2e;
 }
 
 .container {
-    max-width: 400px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #ccc;
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
-input[type='number'],
+input[type="number"],
 input[type="number"]:hover,
 input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+  appearance: none;
+  -moz-appearance: textfield;
 }
 input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-sizing: border-box;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #00bfff;
+  background-color: #00bfff;
 }
 
 @keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
-    background-size: 200% 200%;
-    animation: backgroundAnimation 15s ease infinite;
+  background-size: 200% 200%;
+  animation: backgroundAnimation 15s ease infinite;
 }
 
 .result-text {
-    font-size: 15pt;
+  font-size: 15pt;
 }
 
 .lack {
-    margin-top: 10px;
+  margin-top: 10px;
 }
+
+a:link {
+  color: #45c5db;
+}
+
+a:hover {
+  color: #7ec9d6;
+}
+
+a:visited {
+  color: #70c5d4;
+}
+
+a:active {
+  color: #96e5f3;
+}
+
+.tip {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 12pt;
+  }

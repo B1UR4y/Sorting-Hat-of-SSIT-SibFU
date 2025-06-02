@@ -439,6 +439,7 @@ document
           const testContainer = document.getElementById("test-container");
           const resultContainer = document.getElementById("result");
           const resultText = document.getElementById("result-text");
+          const resultTip = document.getElementById("tip");
 
           function showQuestion() {
             const q = questions[currentQuestionIndex];
@@ -481,7 +482,30 @@ document
             outer: for (const dir of sortedDirections) {
               for (const item of availableDirections) {
                 if (dir.наименование === item.наименование) {
-                  resultText.innerText = `${item.код} ${item.наименование} ${paySource}`;
+                  if (item.наименование === "Прикладная математика")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/010304">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Информатика и вычислительная техника")
+                    { resultTip.innerHTML= '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/09030130">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Информационные системы и технологии")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/09030230">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Информационные системы и технологии. Разработка компьютерных игр и приложений")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/09030231">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Прикладная информатика")
+                    {resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/09030331">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Программная инженерия")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/090304">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Информационная безопасность")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/100301">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Компьютерная безопасность")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/100501">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Информационная безопасность автоматизированных систем")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/100503">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Автоматизация технологических процессов и производств")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/150304">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else if (item.наименование === "Системный анализ и управление")
+                    { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/270303">нажми на ссылку, чтобы узнать подробнее</a>'}
+                  else { resultTip.innerHTML = '<a href="https://ikit.sfu-kras.ru/postup/bak_spec/270304">нажми на ссылку, чтобы узнать подробнее</a>'};
+                  resultText.innerHTML = `${item.код} ${item.наименование} ${paySource}`;
                   break outer;
                 }
               }
